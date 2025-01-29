@@ -1,0 +1,230 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, #1e1e1e, #000000);
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 1.6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Navigation Bar */
+nav {
+  background: linear-gradient(90deg, #ff6f61, #ffcc00, #6effa5);
+  background-size: 300% 300%;
+  animation: gradientShift 6s infinite;
+  color: black;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 5px solid #000000;
+}
+
+nav .logo {
+  font-size: 40px;
+  /* font-weight: bold;
+  text-transform: uppercase; */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #000000;
+}
+
+/* Keyframe Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Main Content */
+main {
+  padding:0px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  margin-top: 15px;
+  padding: 10px;
+  padding-top:0px;
+  padding-bottom: 0;
+  background-color: #3c4748;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Bar Chart */
+.bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 280px;
+  margin: 20px auto;
+  gap: 12px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bar {
+  width: 40px;
+  background: linear-gradient(to top, #ff6f61, #ffcc00);
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.bar:hover {
+  background: linear-gradient(to top, #ffcc00, #ff6f61);
+  transform: scale(1.1);
+  color: #000000;
+}
+
+.bar.highlight {
+  background: linear-gradient(to top, #e53935, #d32f2f);
+  color: white;
+  border: 3px solid #b71c1c;
+  box-shadow: 0 6px 10px rgba(229, 57, 53, 0.5);
+}
+
+/* Buttons */
+button {
+  margin: 15px;
+  margin-top:0px;
+  padding: 12px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #ff6f61, #ffcc00);
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to right, #ffcc00, #ff6f61);
+  transform: scale(1.05);
+}
+
+/* Feedback */
+#feedback {
+  margin: 30px auto;
+  margin-top:0px;
+  margin-bottom:0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f1f1f1;
+  background-color: #3c4748;
+  padding: 15px;
+  /* border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); */
+}
+
+/* Scoreboard */
+.scoreboard {
+  margin: 30px auto;
+  margin-top:0px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3c4748;
+  padding: 10px;
+  margin-bottom:0;
+}
+
+.scoreboard p {
+  color: #f1f1f1;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #0f0f0f;
+  color: white;
+  font-size: 16px;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+/* About Button Tooltip */
+.about-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: -35px; /* Position the tooltip below the button */
+  left: -200px; /* Move the tooltip more to the left */
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.about-button:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

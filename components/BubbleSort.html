@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Bubble Sort Game</title>
+  <link rel="stylesheet" href="BubbleSort.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Bubble Sort Game</div>
+    <ul>
+      <li><a href="unit2.html">Home</a></li>
+      <li><a href="#" class="about-button">About <span class="tooltip-text">Bubble Sort is a simple comparison-based sorting algorithm that repeatedly swaps adjacent elements if they are in the wrong order.</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- <section class="intro">
+      <h1>Interactive Bubble Sort Game</h1>
+      <p>Learn sorting algorithms interactively! Decide whether to switch the two highlighted numbers.</p>
+    </section> -->
+
+    <div class="container">
+      <!-- Bar Chart Container -->
+      <div id="bar-container" class="bar-container"></div>
+
+      <!-- Control Buttons -->
+      <div class="controls">
+        <button id="switch-btn">Switch</button>
+        <button id="dont-switch-btn">Don't Switch</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+
+      <!-- Feedback Message -->
+      <div id="feedback" class="feedback"></div>
+
+      <!-- Scoreboard -->
+      <div class="scoreboard">
+        <p>Right Answers: <span id="right-counter">0</span></p>
+        <p>Wrong Answers: <span id="wrong-counter">0</span></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Interactive Bubble Sort Game. All rights reserved.</p>
+  </footer>
+
+  <script src="BubbleSort.js"></script>
+</body>
+</html>

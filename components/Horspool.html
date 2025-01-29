@@ -1,0 +1,56 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>String Matching Algorithm Visualizer</title>  
+    <link rel="stylesheet" href="Horspool.css">  
+</head>  
+<body>  
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">String Matching Visualizer</div>
+        <ul>
+            <li><a href="unit2.html">Home</a></li>
+            <li><a href="#" class="about-button">About <span class="tooltip-text">Horspool’s algorithm optimizes string matching by skipping sections of the text based on character mismatches.</span></a></li>
+
+            <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="container">  
+        <!-- <h1>String Matching Algorithm Visualizer</h1>   -->
+        
+        <div class="input-group">  
+            <h2>Algorithm:</h2>  
+            <select id="algorithm">  
+                <option value="horspool" selected>Boyer-Moore-Horspool</option>  
+            </select>  
+            <button onclick="toggleStateTable()" id="toggleTableBtn">Show state table</button>  
+        </div>  
+
+        <div class="input-group">  
+            <h2>Text to search:</h2>  
+            <input type="text" id="searchText" value="abcbdabcdbabcddba" style="width: 100%; padding: 8px;">  
+        </div>  
+
+        <div class="input-group">  
+            <h2>Search pattern:</h2>  
+            <input type="text" id="pattern" value="abcd" style="width: 100%; padding: 8px;">  
+        </div>  
+
+        <div id="visualization" class="visualization"></div>  
+        <div class="explanation" id="explanation"></div>  
+
+        <div class="controls">  
+            <button id="prevBtn" onclick="previousStep()">Previous</button>  
+            <button id="nextBtn" onclick="nextStep()">Next</button>  
+            <input type="range" id="progressSlider" class="slider" min="0" value="0">  
+        </div>  
+
+        <div id="stateTable" style="display: none;"></div>  
+    </div>  
+
+    <script src="Horspool.js"></script>  
+</body>  
+</html>
